@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Emotional Piano - Magic Musical Samples</title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <style>
+
+        .product-page {
+            min-height: 90vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 80px 30px;
+        }
+
+
+        .product-container {
+            width: 100%;
+            max-width: 1000px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            background: #1c1c1c;
+
+            border: 1px solid #2f2f2f;
+
+            border-radius: 20px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+
+        .product-image img {
+            width: 100%;
+
+            border-radius: 15px;
+
+            display: block;
+        }
+
+
+        .product-info h1 {
+            font-size: 44px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .product-info p {
+            color: #bdbdbd;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+
+        .product-price {
+            font-size: 32px;
+
+            font-weight: bold;
+
+            color: #4da6ff;
+
+            margin-bottom: 25px;
+        }
+
+
+        .product-info audio {
+            width: 100%;
+
+            margin-bottom: 30px;
+        }
+
+
+        .stripe-button {
+            display: block;
+
+            width: 100%;
+
+            padding: 17px;
+
+            background: #4da6ff;
+
+            color: white;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+
+        .stripe-button:hover {
+            background: #2196f3;
+        }
+
+
+        .back-button {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            color: #bdbdbd;
+
+            text-decoration: none;
+
+            font-size: 16px;
+        }
+
+
+        .back-button:hover {
+            color: white;
+        }
+
+
+        @media (max-width: 800px) {
+
+            .product-container {
+                grid-template-columns: 1fr;
+
+                padding: 25px;
+            }
+
+
+            .product-info h1 {
+                font-size: 36px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <span class="music-icon">
+                🎵
+            </span>
+
+            Magic Musical Samples
+
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../index.html#featured">
+                Shop
+            </a>
+
+            <a href="#">
+                About
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="header-buttons">
+
+            <a
+                href="../index.html#featured"
+                class="header-btn shop-btn"
+            >
+                Shop
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- PRODUCT -->
+
+    <main class="product-page">
+
+        <div class="product-container">
+
+
+            <!-- IMAGE -->
+
+            <div class="product-image">
+
+                <img
+                    src="https://placehold.co/600x400/222222/ffffff?text=Emotional+Piano"
+                    alt="Emotional Piano"
+                >
+
+            </div>
+
+
+            <!-- INFORMATION -->
+
+            <div class="product-info">
+
+                <h1>
+                    Emotional Piano
+                </h1>
+
+
+                <p>
+                    Beautiful cinematic piano phrases
+                    designed for emotional, atmospheric
+                    and cinematic music.
+                </p>
+
+
+                <p>
+                    This digital sample pack is perfect
+                    for producers, composers and creators.
+                </p>
+
+
+                <audio controls>
+
+                    <source
+                        src="../samples/piano-preview.mp3"
+                        type="audio/mpeg"
+                    >
+
+                    Your browser does not support audio.
+
+                </audio>
+
+
+                <div class="product-price">
+                    $4.50 NZD
+                </div>
+
+
+                <!-- STRIPE TEST PAYMENT -->
+
+                <a
+                    href="https://buy.stripe.com/test_8x27sMfwNfkv3iz7hhdQQ00"
+                    class="stripe-button"
+                >
+                    Buy Now
+                </a>
+
+
+                <a
+                    href="../index.html#featured"
+                    class="back-button"
+                >
+                    ← Back to Samples
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
