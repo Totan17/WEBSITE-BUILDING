@@ -1,24 +1,61 @@
+/* =========================================================
+   MAGIC MUSICAL SAMPLES
+   MAIN STYLESHEET
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+
+/* =========================================================
+   HTML
+   ========================================================= */
+
 html {
     scroll-behavior: smooth;
 }
 
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #000000;
+
+    color: #111;
+
     min-height: 100vh;
 
-    opacity: 0;
-    animation: pageFadeIn 3s ease-in-out forwards;
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8f8f8 35%,
+            #ffffff 70%,
+            #f5f5f5 100%
+        );
+
+    background-attachment: fixed;
+
+    animation: pageFadeIn 1.8s ease-in-out;
 }
 
+
+/* =========================================================
+   PAGE FADE IN
+   ========================================================= */
+
 @keyframes pageFadeIn {
+
     from {
         opacity: 0;
     }
@@ -26,15 +63,19 @@ body {
     to {
         opacity: 1;
     }
+
 }
 
 
-/* HEADER */
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 header {
+
     width: 100%;
 
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.94);
 
     border-bottom: 1px solid #dddddd;
 
@@ -51,18 +92,43 @@ header {
     top: 0;
 
     z-index: 1000;
+
+    backdrop-filter: blur(10px);
+
 }
 
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
 .logo {
+
     font-size: 24px;
 
     font-weight: bold;
 
-    color: #000000;
+    color: #111;
+
 }
 
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
 nav a {
-    color: #555555;
+
+    color: #555;
 
     text-decoration: none;
 
@@ -70,17 +136,28 @@ nav a {
 
     font-size: 15px;
 
-    transition: 0.2s;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+
 }
+
 
 nav a:hover {
-    color: #000000;
+
+    color: #000;
+
+    transform: translateY(-1px);
+
 }
 
 
-/* HERO */
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero {
+
     min-height: 500px;
 
     display: flex;
@@ -98,38 +175,82 @@ nav a:hover {
     background:
         radial-gradient(
             circle at center,
-            #eeeeee 0%,
-            #f7f7f7 45%,
-            #ffffff 100%
+            #ffffff 0%,
+            #f5f5f5 45%,
+            #eeeeee 100%
         );
+
 }
 
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
 .hero h1 {
+
     font-size: 60px;
 
     margin-bottom: 20px;
 
-    color: #000000;
+    color: #111;
+
+    animation: heroFade 1.5s ease;
+
 }
 
+
+@keyframes heroFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
 .hero p {
+
     max-width: 650px;
 
-    color: #666666;
+    color: #555;
 
     font-size: 20px;
 
     line-height: 1.6;
+
 }
 
+
+/* =========================================================
+   BROWSE BUTTON
+   ========================================================= */
+
 .browse-button {
+
     margin-top: 35px;
 
     padding: 14px 28px;
 
-    background: #000000;
+    background: #111;
 
-    color: #ffffff;
+    color: #fff;
 
     border-radius: 8px;
 
@@ -137,137 +258,194 @@ nav a:hover {
 
     font-weight: bold;
 
-    transition: 0.2s;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+
 }
+
 
 .browse-button:hover {
-    transform: translateY(-2px);
 
-    background: #333333;
+    transform: translateY(-3px);
+
+    background: #333;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+
 }
 
 
-/* PRODUCTS */
+/* =========================================================
+   PRODUCTS SECTION
+   ========================================================= */
 
 .products-section {
 
     width: 100%;
 
-    max-width: 1800px;
+    padding: 80px 30px;
+
+    max-width: 1500px;
 
     margin: auto;
 
-    padding: 80px 25px 100px;
-
-    background: #ffffff;
 }
+
+
+/* =========================================================
+   PRODUCTS TITLE
+   ========================================================= */
 
 .products-section h2 {
 
     text-align: center;
 
-    font-size: 40px;
+    font-size: 36px;
 
     margin-bottom: 50px;
 
-    color: #000000;
+    color: #111;
+
 }
 
 
-/* 4 LARGE COLUMNS */
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
 
 .product-grid {
 
     display: grid;
 
     grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+        repeat(4, 1fr);
 
-    gap: 35px;
+    gap: 25px;
 
-    width: 100%;
 }
 
 
-/* PRODUCT CARD */
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
 
 .product-card {
 
-    width: 100%;
-
-    min-width: 0;
-
-    background: #f5f5f5;
+    background: rgba(255, 255, 255, 0.96);
 
     border: 1px solid #dddddd;
 
-    border-radius: 18px;
+    border-radius: 15px;
 
-    padding: 35px;
+    padding: 30px;
 
-    box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.08);
+    min-height: 300px;
 
     display: flex;
 
     flex-direction: column;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
 }
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.product-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #bbbbbb;
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.13);
+
+}
+
+
+/* =========================================================
+   PRODUCT TITLE
+   ========================================================= */
 
 .product-card h3 {
 
-    font-size: 28px;
+    font-size: 25px;
 
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 
-    color: #000000;
+    color: #111;
+
+    line-height: 1.25;
+
 }
+
+
+/* =========================================================
+   PRODUCT DESCRIPTION
+   ========================================================= */
 
 .product-description {
 
-    color: #666666;
+    color: #666;
 
     line-height: 1.6;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 
-    font-size: 16px;
+    font-size: 15px;
+
 }
 
 
-/* AUDIO */
+/* =========================================================
+   AUDIO / MIDI LABEL
+   ========================================================= */
 
 .audio-title {
 
     font-size: 14px;
 
-    color: #555555;
-
-    margin-bottom: 10px;
-}
-
-audio {
-
-    width: 100%;
-
-    margin-bottom: 25px;
-}
-
-
-/* PRICE */
-
-.price {
-
-    font-size: 28px;
-
-    font-weight: bold;
+    color: #555;
 
     margin-bottom: 20px;
 
-    color: #000000;
 }
 
 
-/* BUY BUTTON */
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.price {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #111;
+
+    margin-top: auto;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================================================
+   BUY BUTTON
+   ========================================================= */
 
 .buy-button {
 
@@ -275,34 +453,75 @@ audio {
 
     width: 100%;
 
-    padding: 16px;
+    padding: 15px;
 
-    background: #000000;
+    background: #111;
 
-    color: #ffffff;
+    color: #fff;
 
     text-align: center;
 
     text-decoration: none;
 
+    border: none;
+
     border-radius: 8px;
 
     font-weight: bold;
 
-    font-size: 17px;
+    font-size: 16px;
 
-    transition: 0.2s;
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
 }
+
+
+/* =========================================================
+   BUY BUTTON HOVER
+   ========================================================= */
 
 .buy-button:hover {
 
-    background: #333333;
+    background: #333;
 
     transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.18);
+
 }
 
 
-/* FOOTER */
+/* =========================================================
+   BUY BUTTON ACTIVE
+   ========================================================= */
+
+.buy-button:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   WORK IN PROGRESS
+   ========================================================= */
+
+.product-card .price {
+
+    letter-spacing: 0.2px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
 
@@ -312,31 +531,79 @@ footer {
 
     text-align: center;
 
-    color: #777777;
+    color: #777;
 
     font-size: 14px;
 
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.8);
+
 }
 
 
-/* TABLET */
+/* =========================================================
+   LARGE SCREENS
+   ========================================================= */
 
-@media (max-width: 1100px) {
+@media (min-width: 1700px) {
+
+    .products-section {
+
+        max-width: 1650px;
+
+    }
 
     .product-grid {
 
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+        gap: 30px;
+
+    }
+
+    .product-card {
+
+        padding: 35px;
 
     }
 
 }
 
 
-/* PHONE */
+/* =========================================================
+   TABLETS
+   ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 1100px) {
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLETS
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
 
     header {
 
@@ -345,45 +612,123 @@ footer {
         flex-direction: column;
 
         gap: 12px;
+
     }
+
+
+    .logo {
+
+        font-size: 21px;
+
+        text-align: center;
+
+    }
+
+
+    nav {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
 
     nav a {
 
         margin-left: 10px;
 
         margin-right: 10px;
+
     }
+
+
+    .hero {
+
+        min-height: 450px;
+
+        padding: 60px 20px;
+
+    }
+
 
     .hero h1 {
 
         font-size: 42px;
+
     }
+
 
     .hero p {
 
         font-size: 17px;
+
     }
+
 
     .products-section {
 
-        padding: 60px 15px 80px;
+        padding: 60px 20px;
+
     }
+
 
     .products-section h2 {
 
-        font-size: 32px;
+        font-size: 30px;
+
+        margin-bottom: 35px;
+
     }
+
 
     .product-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
-        gap: 25px;
+        gap: 20px;
+
     }
+
 
     .product-card {
 
+        min-height: 280px;
+
         padding: 25px;
+
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .product-card h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    .products-section {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
     }
 
 }
