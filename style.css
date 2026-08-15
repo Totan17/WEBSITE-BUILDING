@@ -33,16 +33,21 @@ body {
 
 header {
     width: 100%;
+
     background: #ffffff;
+
     border-bottom: 1px solid #dddddd;
 
     padding: 20px 40px;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     position: sticky;
+
     top: 0;
 
     z-index: 1000;
@@ -50,12 +55,15 @@ header {
 
 .logo {
     font-size: 24px;
+
     font-weight: bold;
+
     color: #000000;
 }
 
 nav a {
     color: #555555;
+
     text-decoration: none;
 
     margin-left: 25px;
@@ -76,9 +84,11 @@ nav a:hover {
     min-height: 500px;
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: center;
+
     align-items: center;
 
     text-align: center;
@@ -140,21 +150,23 @@ nav a:hover {
 /* PRODUCTS */
 
 .products-section {
-    padding: 80px 30px;
 
     width: 100%;
 
-    max-width: 1500px;
+    max-width: 1800px;
 
     margin: auto;
+
+    padding: 80px 25px 100px;
 
     background: #ffffff;
 }
 
 .products-section h2 {
+
     text-align: center;
 
-    font-size: 36px;
+    font-size: 40px;
 
     margin-bottom: 50px;
 
@@ -162,15 +174,16 @@ nav a:hover {
 }
 
 
-/* EXACTLY 4 COLUMNS */
+/* 4 LARGE COLUMNS */
 
 .product-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(4, 1fr);
+        repeat(4, minmax(0, 1fr));
 
-    gap: 30px;
+    gap: 35px;
 
     width: 100%;
 }
@@ -179,40 +192,52 @@ nav a:hover {
 /* PRODUCT CARD */
 
 .product-card {
+
+    width: 100%;
+
+    min-width: 0;
+
     background: #f5f5f5;
 
     border: 1px solid #dddddd;
 
-    border-radius: 15px;
+    border-radius: 18px;
 
-    padding: 25px;
+    padding: 35px;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.08);
+        0 12px 35px rgba(0, 0, 0, 0.08);
 
-    min-width: 0;
+    display: flex;
+
+    flex-direction: column;
 }
 
 .product-card h3 {
-    font-size: 25px;
 
-    margin-bottom: 10px;
+    font-size: 28px;
+
+    margin-bottom: 15px;
 
     color: #000000;
 }
 
 .product-description {
+
     color: #666666;
 
     line-height: 1.6;
 
     margin-bottom: 25px;
+
+    font-size: 16px;
 }
 
 
 /* AUDIO */
 
 .audio-title {
+
     font-size: 14px;
 
     color: #555555;
@@ -221,6 +246,7 @@ nav a:hover {
 }
 
 audio {
+
     width: 100%;
 
     margin-bottom: 25px;
@@ -230,7 +256,8 @@ audio {
 /* PRICE */
 
 .price {
-    font-size: 24px;
+
+    font-size: 28px;
 
     font-weight: bold;
 
@@ -243,11 +270,12 @@ audio {
 /* BUY BUTTON */
 
 .buy-button {
+
     display: block;
 
     width: 100%;
 
-    padding: 15px;
+    padding: 16px;
 
     background: #000000;
 
@@ -261,12 +289,13 @@ audio {
 
     font-weight: bold;
 
-    font-size: 16px;
+    font-size: 17px;
 
     transition: 0.2s;
 }
 
 .buy-button:hover {
+
     background: #333333;
 
     transform: translateY(-2px);
@@ -276,6 +305,7 @@ audio {
 /* FOOTER */
 
 footer {
+
     border-top: 1px solid #dddddd;
 
     padding: 30px;
@@ -295,8 +325,10 @@ footer {
 @media (max-width: 1100px) {
 
     .product-grid {
+
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(2, minmax(0, 1fr));
+
     }
 
 }
@@ -307,6 +339,7 @@ footer {
 @media (max-width: 650px) {
 
     header {
+
         padding: 18px 20px;
 
         flex-direction: column;
@@ -315,25 +348,42 @@ footer {
     }
 
     nav a {
+
         margin-left: 10px;
+
         margin-right: 10px;
     }
 
     .hero h1 {
+
         font-size: 42px;
     }
 
     .hero p {
+
         font-size: 17px;
     }
 
     .products-section {
-        padding: 60px 20px;
+
+        padding: 60px 15px 80px;
+    }
+
+    .products-section h2 {
+
+        font-size: 32px;
     }
 
     .product-grid {
-        grid-template-columns:
-            1fr;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .product-card {
+
+        padding: 25px;
     }
 
 }
